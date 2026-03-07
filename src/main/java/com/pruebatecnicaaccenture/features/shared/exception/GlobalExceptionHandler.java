@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.bind.support.WebExchangeBindException;
+import org.springframework.web.server.ServerWebInputException;
 
 import com.pruebatecnicaaccenture.features.shared.response.ApiResponse;
 
@@ -59,5 +60,11 @@ public class GlobalExceptionHandler {
     public Mono<ResponseEntity<ApiResponse<Object>>> handleConflict(DataIntegrityViolationException ex) {
         return Mono.just(ResponseEntity.status(HttpStatus.BAD_REQUEST)
                 .body(new ApiResponse<>(400, "El registro ya existe", "0000", "error")));
+    }
+
+    @ExceptionHandler(ServerWebInputException.class)
+    public Mono<ResponseEntity<ApiResponse<Object>>> handleServerWebInputException(ServerWebInputException ex) {
+        return Mono.just(ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                .body(new ApiResponse<>(400, "Dato no valido, por favor verifique los datos enviados", "0000", "error")));
     }
 }
