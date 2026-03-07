@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Prueba tecnica Accenture
+  
+  r2dbc:
+    url: ${SPRING_R2DBC_URL:r2dbc:postgresql://localhost:5432/prueba_tecnica_accenture}
+    username: ${SPRING_R2DBC_USERNAME:admin}
+    password: ${SPRING_R2DBC_PASSWORD:Admin123@}
