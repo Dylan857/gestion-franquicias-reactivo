@@ -1,4 +1,4 @@
-# Api robusta con programacion reactiva
+# Sistema Reactivo de Gestión de Franquicias
 
 API robusta desarrollada con **Spring Boot WebFlux** para la gestión de franquicias, sucursales y productos. El proyecto implementa programación reactiva, arquitectura limpia, contenerización y aprovisionamiento de infraestructura mediante código.
 
