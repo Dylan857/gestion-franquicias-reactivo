@@ -1,4 +1,4 @@
-# Prueba Técnica Backend – Accenture
+# Api robusta con programacion reactiva
 
 API robusta desarrollada con **Spring Boot WebFlux** para la gestión de franquicias, sucursales y productos. El proyecto implementa programación reactiva, arquitectura limpia, contenerización y aprovisionamiento de infraestructura mediante código.
 
